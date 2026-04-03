@@ -1,0 +1,108 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+  @apply m-0 p-0 box-border;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 text-gray-100 overflow-x-hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-400;
+}
+
+/* Glass morphism effect */
+.glass {
+  @apply backdrop-blur-md bg-white/10 border border-white/20 rounded-xl;
+}
+
+.glass-dark {
+  @apply backdrop-blur-md bg-black/20 border border-white/10 rounded-xl;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-primary-400 via-orange-400 to-red-500 bg-clip-text text-transparent;
+}
+
+/* Button base styles */
+.btn-primary {
+  @apply px-6 py-3 rounded-lg bg-gradient-to-r from-primary-500 to-orange-500 text-white font-semibold transition-all duration-300 hover:from-primary-600 hover:to-orange-600 hover:shadow-glow-lg active:scale-95;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 rounded-lg border-2 border-primary-500 text-primary-400 font-semibold transition-all duration-300 hover:bg-primary-500/10 hover:shadow-glow active:scale-95;
+}
+
+/* Card hover effect */
+.card-hover {
+  @apply transition-all duration-500 hover:scale-105 hover:shadow-glow-lg;
+}
+
+/* Smooth transitions */
+.smooth-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Loading animation */
+@keyframes serving-hope {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05) rotate(5deg);
+    opacity: 0.8;
+  }
+}
+
+.serving-hope {
+  animation: serving-hope 2s ease-in-out infinite;
+}
+
+/* Parallax effect text */
+.parallax-text {
+  @apply relative inline-block;
+}
+
+/* Animated gradient background */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-gradient-bg {
+  background: linear-gradient(-45deg, #ff6b35, #ff8c4d, #ffa75d, #ffb366);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Overlay effect */
+.overlay-dark {
+  @apply absolute inset-0 bg-black/40;
+}
